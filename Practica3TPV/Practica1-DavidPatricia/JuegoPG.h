@@ -9,7 +9,8 @@
 #include "checkML.h"
 #include <stack>
 
-enum Texturas_t { TFondo, TGlobo, TMariposa, TPremio, TBotonMenu, TBotonJugar, TBotonSalir, TBotonScore, TBotonContinuar, TPelota};
+enum Texturas_t { TFondo, TGlobo, TMariposa, TPremio, TBotonMenu, TBotonJugar, TBotonSalir, TBotonScore,
+	TBotonContinuar, TPelota, TConfiguracion, TGlobosBoton, TBolaBoton};
 
 class JuegoPG {
 public:
@@ -33,8 +34,13 @@ public:
 	Sound_SDL* getSound()const { return sonido; };
 	TexturasSDL* getPuntosText() { return pTexturaG[pTexturaG.size()-1]; };
 	EstadoJuego* getState() { return pilaEstados.top(); };
+	void factoria(int fac) { factory = fac; };////Si recibe 1 es oldFactory si recibe 0 es newFactory
+	int getFactory() {return factory;};
+
 
 private:
+
+	int factory=1;//POR DEFECTO ESTA LA ANTIGUA FACTORIA
 	std::stack<EstadoJuego*> pilaEstados;
 	const int SCREEN_WIDTH = 640;
 	const int SCREEN_HEIGHT = 480;

@@ -14,6 +14,7 @@
     <ClInclude Include="Boton.h" />
     <ClInclude Include="Bouncing_Ball.h" />
     <ClInclude Include="checkML.h" />
+    <ClInclude Include="confPG.h" />
     <ClInclude Include="Error.h" />
     <ClInclude Include="EstadoJuego.h" />
     <ClInclude Include="EstadoPG.h" />
@@ -39,6 +40,7 @@
   <ItemGroup>
     <ClCompile Include="Boton.cpp" />
     <ClCompile Include="Bouncing_Ball.cpp" />
+    <ClCompile Include="confPG.cpp" />
     <ClCompile Include="Error.cpp" />
     <ClCompile Include="EstadoPG.cpp" />
     <ClCompile Include="Fuente.cpp" />

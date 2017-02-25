@@ -1,6 +1,4 @@
-﻿  Vago.cpp
-  Generando código...
-  Omitiendo... (no se detectaron cambios relevantes)
-  NewFactory.cpp
+﻿  JuegoPG.cpp
+c:\users\patricia\documents\universidad\tpv\practica4\tpv\practica3tpv\practica1-davidpatricia\juegopg.cpp(68): warning C4018: '<': no coinciden signed/unsigned
   Practica1-DavidPatricia.vcxproj -> C:\Users\Patricia\Documents\UNIVERSIDAD\TPV\Practica4\TPV\Practica3TPV\bin\Practica1-DavidPatriciaDebug.exe
   Practica1-DavidPatricia.vcxproj -> C:\Users\Patricia\Documents\UNIVERSIDAD\TPV\Practica4\TPV\Practica3TPV\bin\Practica1-DavidPatriciaDebug.pdb (Full PDB)

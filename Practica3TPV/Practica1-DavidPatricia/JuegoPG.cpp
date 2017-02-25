@@ -39,7 +39,7 @@ void JuegoPG::getMousePos(int & mpx, int & mpy)const {
 void JuegoPG::initMedia() {
 	TexturasSDL::loadFuente("..\\fonts\\MONOFONT.TTF", 12);
 
-	for (int i = 0; i < 10; i++){
+	for (int i = 0; i < 13; i++){
 		pTexturaG.emplace_back(new TexturasSDL());
 		pTexturaG[i]->load(pRender, archText[i]);
 	}
@@ -87,6 +87,9 @@ void JuegoPG::rellenaArch() {
 	archText.push_back("..\\bmps\\scoreBoton.png");
 	archText.push_back("..\\bmps\\continuarBoton.png");
 	archText.push_back("..\\bmps\\pelota.png");
+	archText.push_back("..\\bmps\\configurarBoton.png");
+	archText.push_back("..\\bmps\\globosBoton.png");
+	archText.push_back("..\\bmps\\bolasBoton.png");
 }
 
 

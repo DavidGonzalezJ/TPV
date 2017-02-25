@@ -9,9 +9,13 @@
 
 PlayPG::PlayPG(JuegoPG* juego) :EstadoPG(juego)
 {
+
 	sonido = juego->getSound();
 	pRender = juego->getRender();
-	factory = new NewFactory();
+	if (juego->getFactory() == 1) {
+		factory = new OldFactory();
+	}else factory = new NewFactory();
+
 	initGlobos();
 }
 
@@ -61,7 +65,6 @@ void PlayPG::freeGlobos() {
 }
 
 bool PlayPG::gameOver() {
-	std::cout << "Num Globos: " << numGlobos;
 	return numGlobos <= 0;
 }
 
