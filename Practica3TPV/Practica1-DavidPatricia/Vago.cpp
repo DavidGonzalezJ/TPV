@@ -1,7 +1,5 @@
 #include "Vago.h"
 
-
-
 Vago::Vago()
 {
 }

@@ -17,9 +17,9 @@ ObjetoJuego* NewFactory::createNormalElement(int px, int py, JuegoPG* game) {
 }
 
 ObjetoJuego* NewFactory::createSpecialElement(int px, int py, JuegoPG* game) {
-	return new Mariposa(px, py, game);
+	return new Vago();
 }
 
 ObjetoJuego* NewFactory::createPrizeElement(int px, int py, JuegoPG* game) {
-	return new Premio(px, py, game);
+	return new Vago();
 }
