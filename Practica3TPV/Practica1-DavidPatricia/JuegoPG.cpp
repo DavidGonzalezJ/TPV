@@ -80,7 +80,7 @@ void JuegoPG::rellenaArch() {
 	archText.push_back("..\\bmps\\fondo.png");
 	archText.push_back("..\\bmps\\Globo.png");
 	archText.push_back("..\\bmps\\Mariposa.png");
-	archText.push_back("..\\bmps\\Doritos.png");
+	archText.push_back("..\\bmps\\premio.png");
 	archText.push_back("..\\bmps\\menuBoton.png");
 	archText.push_back("..\\bmps\\jugarBoton.png");
 	archText.push_back("..\\bmps\\salirBoton.png");

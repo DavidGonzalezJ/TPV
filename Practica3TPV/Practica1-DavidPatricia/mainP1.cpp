@@ -1,5 +1,6 @@
-//Práctica 3
+//Práctica 4
 //Autores: Patricia Cabrero y David González
+
 #ifdef _DEBUG
 #define _CRTDBG_MAP_ALLOC
 #include <stdlib.h>

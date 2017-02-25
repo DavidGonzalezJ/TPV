@@ -1,17 +1,19 @@
 #include "Bouncing_Ball.h"
+#include "PlayPG.h"
 
 
-Bouncing_Ball::Bouncing_Ball()
+Bouncing_Ball::Bouncing_Ball(int px, int py, JuegoPG* game)
 {
 
 	textura = TPelota;
 	juego = game;
-	puntos = 10;
-	if (rand() % 100 < PVIS) vis = true; else vis = false;
+	puntos = 100;
 	expl = false;
 	rect->x = px;
 	rect->y = py;
 	juego->getTextura(textura)->daTamaño(rect->h, rect->w);
+	sentido();
+
 }
 
 
@@ -19,8 +21,22 @@ Bouncing_Ball::~Bouncing_Ball()
 {
 }
 
+void Bouncing_Ball::sentido() {
+	//Inicializa el sentido de la pelota
+	int sentido = rand() % 2;
+	dx = (rand() % 10) + 1;
+	if (sentido = 1) {
+		dx *= -1;
+	}
+	sentido = rand() % 2;
+	dy = (rand() % 10) + 1;
+	if (sentido = 1) {
+		dy *= -1;
+	}
+}
+
 void Bouncing_Ball::draw() const {
-	if (vis && !expl) {
+	if (!expl) {
 		juego->getTextura(textura)->draw(juego->getRender(), rect, nullptr);
 	}
 }
@@ -30,12 +46,11 @@ bool Bouncing_Ball::onClick(){
 	bool desaparece = false;
 	int x, y;
 	juego->getMousePos(x, y);
-	if (!expl && vis && dentro(x, y)) {
+	if (!expl && dentro(x, y)) {
 		expl = true;
 		desaparece = true;
-		vis = false;
-		dynamic_cast<PlayPG*>(juego->getState())->newBaja(this);
 		dynamic_cast<PlayPG*>(juego->getState())->newPuntos(this);
+		dynamic_cast<PlayPG*>(juego->getState())->newBaja(this);
 	}
 	return desaparece;
 }
@@ -43,21 +58,28 @@ bool Bouncing_Ball::onClick(){
 //Devuelve true si el globo desaparece
 void Bouncing_Ball::update(){
 	bool desaparece = false;
-	if (vis && !expl){
-		//Aquí se genera un aleatorio para ver si el globo se deshincha o no
-		if (rand() % 100 < PDES) {
-			rect->h -= DT;
-			rect->w -= DT;
-			puntos += AP;
-			if (rect->h <= 10 || rect->w <= 10) {
-				vis = false;
-				desaparece = true;
-				expl = true;
-				dynamic_cast<PlayPG*>(juego->getState())->newBaja(this);
+	if (!expl){
+		bool aux = false;
+		//Aquí se genera un aleatorio para ver hacia donde avanza la bola
+		if (rect->x + dx > juego->getWindowWidth() - 50 || rect->x + dx < 0) {
+			dx *= -1;
+			aux = true;
+			puntos -= AP;
+			
+		}
+		if (rect->y + dy > juego->getWindowHeight() - 50 || rect->y + dy < 0) {
+			dy *= -1;
+			if (!aux) {
+				puntos -= AP;
 			}
 		}
+		
+		rect->x += dx;
+		rect->y += dy;
+		if (puntos <= 0 ) {
+			desaparece = true;
+			expl = true;
+			dynamic_cast<PlayPG*>(juego->getState())->newBaja(this);
+		}
 	}
-	if (!expl)
-		//Generamos un aleatorio nueva para ver si un globo invisible se vuelve visible
-		if (rand() % 100 < PVIS) vis = true; else vis = false;
 }

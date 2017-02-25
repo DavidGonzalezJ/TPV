@@ -28,6 +28,7 @@ public:
 	void popState();
 	void onExit();
 	int getWindowWidth() { return SCREEN_WIDTH; };
+	int getWindowHeight() { return SCREEN_HEIGHT; };
 	void muestraMensaje(std::string info, std::string boton);
 	Sound_SDL* getSound()const { return sonido; };
 	TexturasSDL* getPuntosText() { return pTexturaG[pTexturaG.size()-1]; };

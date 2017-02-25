@@ -4,12 +4,14 @@
 #include "GloboA.h"
 #include "GameOver.h"
 #include "OldFactory.h"
+#include "NewFactory.h"
+#include "Bouncing_Ball.h"
 
 PlayPG::PlayPG(JuegoPG* juego) :EstadoPG(juego)
 {
 	sonido = juego->getSound();
 	pRender = juego->getRender();
-	factory = new OldFactory();
+	factory = new NewFactory();
 	initGlobos();
 }
 
@@ -20,7 +22,7 @@ PlayPG::~PlayPG()
 }
 
 void PlayPG::newBaja(ObjetoJuego* po) {
-	if (typeid(*po) == typeid(GlobosPG) || typeid(*po) == typeid(GloboA)) {
+	if (typeid(*po) == typeid(GlobosPG) || typeid(*po) == typeid(Bouncing_Ball)) {
 		--numGlobos;
 	}
 	else if (typeid(*po) == typeid(Premio)) {
@@ -42,7 +44,7 @@ bool PlayPG::initGlobos() {
 	bool success = true;
 
 	for (int n = 0; n < numGlobos; ++n) {
-		pObjetos.emplace_back(factory->createNormalElement(rand() % 720, rand() % 480, juego));
+		pObjetos.emplace_back(factory->createNormalElement(rand() % (juego->getWindowWidth()-51), rand() % (juego->getWindowHeight() - 51), juego));
 	}
 
 	for (int i = 0; i < 2; i++){
@@ -52,13 +54,14 @@ bool PlayPG::initGlobos() {
 }
 
 void PlayPG::freeGlobos() {
-	for (int n = 0; n < pObjetos.size(); ++n) {
+	for (unsigned int n = 0; n < pObjetos.size(); ++n) {
 		delete pObjetos[n];
 		pObjetos[n] = nullptr;
 	}
 }
 
 bool PlayPG::gameOver() {
+	std::cout << "Num Globos: " << numGlobos;
 	return numGlobos <= 0;
 }
 
