@@ -7,7 +7,7 @@ Bouncing_Ball::Bouncing_Ball(int px, int py, JuegoPG* game)
 
 	textura = TPelota;
 	juego = game;
-	puntos = 100;
+	puntos = 20;
 	expl = false;
 	rect->x = px;
 	rect->y = py;

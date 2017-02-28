@@ -31,8 +31,11 @@
     <ClInclude Include="ObjetoPG.h" />
     <ClInclude Include="OldFactory.h" />
     <ClInclude Include="Pausa.h" />
+    <ClInclude Include="PBBExternAccess.h" />
+    <ClInclude Include="PBBVMprog.h" />
     <ClInclude Include="PlayPG.h" />
     <ClInclude Include="Premio.h" />
+    <ClInclude Include="ProgrammableBouncingBall.h" />
     <ClInclude Include="Sound_SDL.h" />
     <ClInclude Include="TexturasSDL.h" />
     <ClInclude Include="Vago.h" />
@@ -55,8 +58,10 @@
     <ClCompile Include="ObjetoPG.cpp" />
     <ClCompile Include="OldFactory.cpp" />
     <ClCompile Include="Pausa.cpp" />
+    <ClCompile Include="PBBVMprog.cpp" />
     <ClCompile Include="PlayPG.cpp" />
     <ClCompile Include="Premio.cpp" />
+    <ClCompile Include="ProgrammableBouncingBall.cpp" />
     <ClCompile Include="Sound_SDL.cpp" />
     <ClCompile Include="TexturasSDL.cpp" />
     <ClCompile Include="Vago.cpp" />
@@ -73,7 +78,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v120</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">

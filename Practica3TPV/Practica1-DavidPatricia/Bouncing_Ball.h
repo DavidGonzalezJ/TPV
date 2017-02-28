@@ -10,7 +10,7 @@ public:
 	virtual bool onClick();
 	virtual void update();
 
-private:
+protected:
 	bool expl;
 	int dx, dy;
 	static const int AP = 10; //Puntos que resta cada vez que se mueve

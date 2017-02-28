@@ -1,3 +1,34 @@
-﻿  LINK : no se encontró C:\Users\vixad\Searches\Escritorio\Prácticas c++\Practica4\TPV\Practica3TPV\bin\Practica1-DavidPatriciaDebug.exe o no lo generó el último vínculo incremental; ejecutando vínculo completo
-  Practica1-DavidPatricia.vcxproj -> C:\Users\vixad\Searches\Escritorio\Prácticas c++\Practica4\TPV\Practica3TPV\bin\Practica1-DavidPatriciaDebug.exe
-  Practica1-DavidPatricia.vcxproj -> C:\Users\vixad\Searches\Escritorio\Prácticas c++\Practica4\TPV\Practica3TPV\bin\Practica1-DavidPatriciaDebug.pdb (Full PDB)
+﻿Build started 28/02/2017 16:52:59.
+     1>Project "C:\hlocal\TPV\Practica3TPV\Practica1-DavidPatricia\Practica1-DavidPatricia.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\software\programacion\MSVStudio2013\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Bouncing_Ball.cpp
+         Bouncing_Ball.cpp
+       Link:
+         C:\software\programacion\MSVStudio2013\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\hlocal\TPV\Practica3TPV\bin\Practica1-DavidPatriciaDebug.exe" /INCREMENTAL /NOLOGO SDL2.lib SDL2main.lib SDL2_image.lib SDL2_ttf.lib SDL2_mixer.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\hlocal\TPV\Practica3TPV\bin\Practica1-DavidPatriciaDebug.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\hlocal\TPV\Practica3TPV\bin\Practica1-DavidPatriciaDebug.lib" /MACHINE:X86 Debug\Boton.obj
+         Debug\Bouncing_Ball.obj
+         Debug\confPG.obj
+         Debug\Error.obj
+         Debug\EstadoPG.obj
+         Debug\Fuente.obj
+         Debug\GameOver.obj
+         Debug\GloboA.obj
+         Debug\GlobosPG.obj
+         Debug\JuegoPG.obj
+         Debug\mainP1.obj
+         Debug\Mariposa.obj
+         Debug\MenuPG.obj
+         Debug\NewFactory.obj
+         Debug\ObjetoPG.obj
+         Debug\OldFactory.obj
+         Debug\Pausa.obj
+         Debug\PlayPG.obj
+         Debug\Premio.obj
+         Debug\Sound_SDL.obj
+         Debug\TexturasSDL.obj
+         Debug\Vago.obj
+         Practica1-DavidPatricia.vcxproj -> C:\hlocal\TPV\Practica3TPV\bin\Practica1-DavidPatriciaDebug.exe
+     1>Done Building Project "C:\hlocal\TPV\Practica3TPV\Practica1-DavidPatricia\Practica1-DavidPatricia.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.74
