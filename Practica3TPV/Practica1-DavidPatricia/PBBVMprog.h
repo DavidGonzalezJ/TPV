@@ -13,7 +13,7 @@ class PBBVMprog
 
 public:
 	enum ENUM { GET_DX, GET_DY,	SET_DX, SET_DY,	GET_CLICKS,	DEACTIVATE,	GET_POINTS, SET_POINTS, 
-		GAIN_POINTS, ADD, MUL, SUB, PUSH, GOTO, JMPZ };
+		GAIN_POINTS, ADD, MUL, SUB, PUSH, GOTO, JMPZ, JMPGT };
 
 	PBBVMprog(string filename) {
 		ifstream in;
@@ -27,6 +27,7 @@ public:
 
 		in.close();
 	}
+	~PBBVMprog();
 
 	const char* getInstr() {
 		return instr;
@@ -44,36 +45,83 @@ public:
 		out.open(outfile, ios::binary);
 
 		char bytecode[MAX_SIZE];
-
+		int addr[MAX_SIZE];
+		bool pending[MAX_SIZE];
 		string keyword;
 		int  pc = 0;
+		int bytecodeNum = -1;
 
 		while (!in.eof()) {
 			in >> keyword;
 			if (in.good()) {
+				bytecodeNum++;
+				addr[bytecodeNum] = pc;
+				pending[bytecodeNum] = false;
 				cout << "Compiling: " << keyword << endl;
-				if (keyword == "Get_dx") {
+				if (keyword == "GET_DX") {
 					bytecode[pc++] = GET_DX;
 				}
-				else if (keyword == "Get_dy") {
+				else if (keyword == "GET_DY") {
 					bytecode[pc++] = GET_DY;
 				}
-				else if (keyword == "Set_dx") {
+				else if (keyword == "SET_DX") {
 					bytecode[pc++] = SET_DX;
 				}
-				else if (keyword == "Set_dy") {
+				else if (keyword == "SET_DY") {
 					bytecode[pc++] = SET_DY;
 				}
-				else if (keyword == "Get_clicks") { ////ESPECIAL
+				else if (keyword == "GET_CLICKS") { ////ESPECIAL
 					bytecode[pc++] = GET_CLICKS;
 				}
-				else if (keyword == "Push") { ////ESPECIAL
+				else if (keyword == "PUSH") { ////ESPECIAL
+					int n;
+					in >> n;
 					bytecode[pc++] = PUSH;
+					*((int *)(bytecode + pc)) = n;
+					pc = pc + sizeof(int);
+				}
+				else if (keyword == "DEACTIVATE") { ////ESPECIAL
+					bytecode[pc++] = DEACTIVATE;
+				}
+				else if (keyword == "GET_POINTS") { ////ESPECIAL
+					bytecode[pc++] = GET_POINTS;
+				}
+				else if (keyword == "GAIN_POINTS") { ////ESPECIAL
+					bytecode[pc++] = GAIN_POINTS;
+				}
+				else if (keyword == "ADD") { ////ESPECIAL
+					bytecode[pc++] = ADD;
+				}
+				else if (keyword == "MUL") { ////ESPECIAL
+					bytecode[pc++] = MUL;
+				}
+				else if (keyword == "SUB") { ////ESPECIAL
+					bytecode[pc++] = SUB;
+				}
+				else if (keyword == "GOTO") { ////ESPECIAL
+					int n;
+					in >> n;
+					bytecode[pc++] = GOTO;
+					if (n < bytecodeNum){
+						bytecode[pc++] = addr[n];///
+					}
+					else{
+
+						pending[pc] = true;
+					}
+					pc = pc + sizeof(int);
+				}
+				else if (keyword == "JMPZ") { ////ESPECIAL
+					bytecode[pc++] = JMPZ;
+				}
+				else if (keyword == "JMPGT") { ////ESPECIAL
+					bytecode[pc++] = JMPGT;
 				}
 				else {
 					throw "Error!";
 				}
-			}
+				
+			} 
 		}
 		out.write(bytecode, pc);
 

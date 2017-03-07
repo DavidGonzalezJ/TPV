@@ -32,6 +32,7 @@
     <ClInclude Include="OldFactory.h" />
     <ClInclude Include="Pausa.h" />
     <ClInclude Include="PBBExternAccess.h" />
+    <ClInclude Include="PBBVM.h" />
     <ClInclude Include="PBBVMprog.h" />
     <ClInclude Include="PlayPG.h" />
     <ClInclude Include="Premio.h" />
@@ -58,6 +59,7 @@
     <ClCompile Include="ObjetoPG.cpp" />
     <ClCompile Include="OldFactory.cpp" />
     <ClCompile Include="Pausa.cpp" />
+    <ClCompile Include="PBBVM.cpp" />
     <ClCompile Include="PBBVMprog.cpp" />
     <ClCompile Include="PlayPG.cpp" />
     <ClCompile Include="Premio.cpp" />

@@ -13,12 +13,33 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Archivos de código fuente\PBB">
+      <UniqueIdentifier>{820fc3bb-9e0e-4889-bdea-7ca268e847b7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de encabezado\PBB">
+      <UniqueIdentifier>{fbe17759-c6b6-4f8f-a84d-fbda453a2260}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de código fuente\Factories">
+      <UniqueIdentifier>{821ebc14-0858-44ab-b710-637024a29120}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de encabezado\Factories">
+      <UniqueIdentifier>{afb5c64d-3d74-4188-9fbc-d098596ba732}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de código fuente\Estados">
+      <UniqueIdentifier>{898935b9-a66f-4812-8466-4348ec87c6ab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de encabezado\Estados">
+      <UniqueIdentifier>{46bb95f3-9a28-4aa1-8b1a-6031c0ed3a5c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de encabezado\Objetos">
+      <UniqueIdentifier>{29cc4624-abc0-4198-9a24-6382423eac47}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de código fuente\Objetos">
+      <UniqueIdentifier>{a7225d0a-c60a-4492-aab9-b4392aefcc70}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Fuente.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="GlobosPG.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
     <ClInclude Include="JuegoPG.h">
@@ -33,78 +54,81 @@
     <ClInclude Include="checkML.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
-    <ClInclude Include="ObjetoJuego.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="Mariposa.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="Premio.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="ObjetoPG.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="GloboA.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="EstadoJuego.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="EstadoPG.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="PlayPG.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="Boton.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="MenuPG.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="GameOver.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="Pausa.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
     <ClInclude Include="Error.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
-    <ClInclude Include="Factory.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="OldFactory.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="Bouncing_Ball.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="NewFactory.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="Vago.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="confPG.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
     <ClInclude Include="ProgrammableBouncingBall.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="PBBExternAccess.h">
-      <Filter>Archivos de encabezado</Filter>
+      <Filter>Archivos de encabezado\PBB</Filter>
     </ClInclude>
     <ClInclude Include="PBBVMprog.h">
-      <Filter>Archivos de encabezado</Filter>
+      <Filter>Archivos de encabezado\PBB</Filter>
+    </ClInclude>
+    <ClInclude Include="PBBVM.h">
+      <Filter>Archivos de encabezado\PBB</Filter>
+    </ClInclude>
+    <ClInclude Include="PBBExternAccess.h">
+      <Filter>Archivos de encabezado\PBB</Filter>
+    </ClInclude>
+    <ClInclude Include="Factory.h">
+      <Filter>Archivos de encabezado\Factories</Filter>
+    </ClInclude>
+    <ClInclude Include="OldFactory.h">
+      <Filter>Archivos de encabezado\Factories</Filter>
+    </ClInclude>
+    <ClInclude Include="NewFactory.h">
+      <Filter>Archivos de encabezado\Factories</Filter>
+    </ClInclude>
+    <ClInclude Include="confPG.h">
+      <Filter>Archivos de encabezado\Estados</Filter>
+    </ClInclude>
+    <ClInclude Include="EstadoJuego.h">
+      <Filter>Archivos de encabezado\Estados</Filter>
+    </ClInclude>
+    <ClInclude Include="EstadoPG.h">
+      <Filter>Archivos de encabezado\Estados</Filter>
+    </ClInclude>
+    <ClInclude Include="GameOver.h">
+      <Filter>Archivos de encabezado\Estados</Filter>
+    </ClInclude>
+    <ClInclude Include="MenuPG.h">
+      <Filter>Archivos de encabezado\Estados</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayPG.h">
+      <Filter>Archivos de encabezado\Estados</Filter>
+    </ClInclude>
+    <ClInclude Include="Pausa.h">
+      <Filter>Archivos de encabezado\Estados</Filter>
+    </ClInclude>
+    <ClInclude Include="Boton.h">
+      <Filter>Archivos de encabezado\Objetos</Filter>
+    </ClInclude>
+    <ClInclude Include="Bouncing_Ball.h">
+      <Filter>Archivos de encabezado\Objetos</Filter>
+    </ClInclude>
+    <ClInclude Include="GloboA.h">
+      <Filter>Archivos de encabezado\Objetos</Filter>
+    </ClInclude>
+    <ClInclude Include="GlobosPG.h">
+      <Filter>Archivos de encabezado\Objetos</Filter>
+    </ClInclude>
+    <ClInclude Include="Mariposa.h">
+      <Filter>Archivos de encabezado\Objetos</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjetoJuego.h">
+      <Filter>Archivos de encabezado\Objetos</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjetoPG.h">
+      <Filter>Archivos de encabezado\Objetos</Filter>
+    </ClInclude>
+    <ClInclude Include="Premio.h">
+      <Filter>Archivos de encabezado\Objetos</Filter>
+    </ClInclude>
+    <ClInclude Include="Vago.h">
+      <Filter>Archivos de encabezado\Objetos</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Fuente.cpp">
-      <Filter>Archivos de código fuente</Filter>
-    </ClCompile>
-    <ClCompile Include="GlobosPG.cpp">
       <Filter>Archivos de código fuente</Filter>
     </ClCompile>
     <ClCompile Include="JuegoPG.cpp">
@@ -119,59 +143,65 @@
     <ClCompile Include="mainP1.cpp">
       <Filter>Archivos de código fuente</Filter>
     </ClCompile>
-    <ClCompile Include="Mariposa.cpp">
-      <Filter>Archivos de código fuente</Filter>
-    </ClCompile>
-    <ClCompile Include="Premio.cpp">
-      <Filter>Archivos de código fuente</Filter>
-    </ClCompile>
-    <ClCompile Include="ObjetoPG.cpp">
-      <Filter>Archivos de código fuente</Filter>
-    </ClCompile>
-    <ClCompile Include="GloboA.cpp">
-      <Filter>Archivos de código fuente</Filter>
-    </ClCompile>
-    <ClCompile Include="EstadoPG.cpp">
-      <Filter>Archivos de código fuente</Filter>
-    </ClCompile>
-    <ClCompile Include="PlayPG.cpp">
-      <Filter>Archivos de código fuente</Filter>
-    </ClCompile>
-    <ClCompile Include="Boton.cpp">
-      <Filter>Archivos de código fuente</Filter>
-    </ClCompile>
-    <ClCompile Include="MenuPG.cpp">
-      <Filter>Archivos de código fuente</Filter>
-    </ClCompile>
-    <ClCompile Include="GameOver.cpp">
-      <Filter>Archivos de código fuente</Filter>
-    </ClCompile>
-    <ClCompile Include="Pausa.cpp">
-      <Filter>Archivos de código fuente</Filter>
-    </ClCompile>
     <ClCompile Include="Error.cpp">
       <Filter>Archivos de código fuente</Filter>
     </ClCompile>
-    <ClCompile Include="OldFactory.cpp">
-      <Filter>Archivos de código fuente</Filter>
-    </ClCompile>
-    <ClCompile Include="Bouncing_Ball.cpp">
-      <Filter>Archivos de código fuente</Filter>
-    </ClCompile>
-    <ClCompile Include="NewFactory.cpp">
-      <Filter>Archivos de código fuente</Filter>
-    </ClCompile>
-    <ClCompile Include="Vago.cpp">
-      <Filter>Archivos de código fuente</Filter>
-    </ClCompile>
-    <ClCompile Include="confPG.cpp">
-      <Filter>Archivos de código fuente</Filter>
-    </ClCompile>
     <ClCompile Include="ProgrammableBouncingBall.cpp">
-      <Filter>Archivos de código fuente</Filter>
+      <Filter>Archivos de código fuente\PBB</Filter>
     </ClCompile>
     <ClCompile Include="PBBVMprog.cpp">
-      <Filter>Archivos de código fuente</Filter>
+      <Filter>Archivos de código fuente\PBB</Filter>
+    </ClCompile>
+    <ClCompile Include="PBBVM.cpp">
+      <Filter>Archivos de código fuente\PBB</Filter>
+    </ClCompile>
+    <ClCompile Include="OldFactory.cpp">
+      <Filter>Archivos de código fuente\Factories</Filter>
+    </ClCompile>
+    <ClCompile Include="NewFactory.cpp">
+      <Filter>Archivos de código fuente\Factories</Filter>
+    </ClCompile>
+    <ClCompile Include="confPG.cpp">
+      <Filter>Archivos de código fuente\Estados</Filter>
+    </ClCompile>
+    <ClCompile Include="EstadoPG.cpp">
+      <Filter>Archivos de código fuente\Estados</Filter>
+    </ClCompile>
+    <ClCompile Include="GameOver.cpp">
+      <Filter>Archivos de código fuente\Estados</Filter>
+    </ClCompile>
+    <ClCompile Include="MenuPG.cpp">
+      <Filter>Archivos de código fuente\Estados</Filter>
+    </ClCompile>
+    <ClCompile Include="Pausa.cpp">
+      <Filter>Archivos de código fuente\Estados</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayPG.cpp">
+      <Filter>Archivos de código fuente\Estados</Filter>
+    </ClCompile>
+    <ClCompile Include="Boton.cpp">
+      <Filter>Archivos de código fuente\Objetos</Filter>
+    </ClCompile>
+    <ClCompile Include="Bouncing_Ball.cpp">
+      <Filter>Archivos de código fuente\Objetos</Filter>
+    </ClCompile>
+    <ClCompile Include="GloboA.cpp">
+      <Filter>Archivos de código fuente\Objetos</Filter>
+    </ClCompile>
+    <ClCompile Include="GlobosPG.cpp">
+      <Filter>Archivos de código fuente\Objetos</Filter>
+    </ClCompile>
+    <ClCompile Include="Mariposa.cpp">
+      <Filter>Archivos de código fuente\Objetos</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjetoPG.cpp">
+      <Filter>Archivos de código fuente\Objetos</Filter>
+    </ClCompile>
+    <ClCompile Include="Premio.cpp">
+      <Filter>Archivos de código fuente\Objetos</Filter>
+    </ClCompile>
+    <ClCompile Include="Vago.cpp">
+      <Filter>Archivos de código fuente\Objetos</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

@@ -13,7 +13,7 @@ ProgrammableBouncingBall::~ProgrammableBouncingBall()
 bool ProgrammableBouncingBall::onClick(){
 	clicks++;
 	/*llamar a la máquina virtual (que explicamos abajo) para ejecutar
-	una funcionalidad programada desde fuera.*/
+	una funcionalidad programada desde fuera.*/	return true;
 }
 
 void ProgrammableBouncingBall::addPoints(int point){ 
