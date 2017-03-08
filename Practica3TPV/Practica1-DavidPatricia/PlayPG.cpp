@@ -5,6 +5,7 @@
 #include "GameOver.h"
 #include "OldFactory.h"
 #include "NewFactory.h"
+#include "PBBFactory.h"
 #include "Bouncing_Ball.h"
 
 PlayPG::PlayPG(JuegoPG* juego) :EstadoPG(juego)
@@ -14,7 +15,9 @@ PlayPG::PlayPG(JuegoPG* juego) :EstadoPG(juego)
 	pRender = juego->getRender();
 	if (juego->getFactory() == 1) {
 		factory = new OldFactory();
-	}else factory = new NewFactory();
+	}else if(juego->getFactory()==0) 
+		factory = new NewFactory();
+	else factory = new PBBFactory();
 
 	initGlobos();
 }

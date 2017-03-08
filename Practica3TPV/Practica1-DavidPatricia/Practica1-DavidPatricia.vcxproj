@@ -32,6 +32,7 @@
     <ClInclude Include="OldFactory.h" />
     <ClInclude Include="Pausa.h" />
     <ClInclude Include="PBBExternAccess.h" />
+    <ClInclude Include="PBBFactory.h" />
     <ClInclude Include="PBBVM.h" />
     <ClInclude Include="PBBVMprog.h" />
     <ClInclude Include="PlayPG.h" />
@@ -59,6 +60,7 @@
     <ClCompile Include="ObjetoPG.cpp" />
     <ClCompile Include="OldFactory.cpp" />
     <ClCompile Include="Pausa.cpp" />
+    <ClCompile Include="PBBFactory.cpp" />
     <ClCompile Include="PBBVM.cpp" />
     <ClCompile Include="PBBVMprog.cpp" />
     <ClCompile Include="PlayPG.cpp" />
@@ -70,6 +72,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram.cd" />
+    <None Include="prog1.vm" />
+    <None Include="prog2.vm" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{9089F4BA-BE99-493B-AC39-8CC7423070F9}</ProjectGuid>

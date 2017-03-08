@@ -1,19 +1,24 @@
 #include "ProgrammableBouncingBall.h"
 #include "PlayPG.h"
 
-ProgrammableBouncingBall::ProgrammableBouncingBall(int px, int py, JuegoPG* game) : Bouncing_Ball(px, py, game)
-{
-}
+ProgrammableBouncingBall:: ProgrammableBouncingBall(int px, int py, JuegoPG* game, std::string nombreProg) : Bouncing_Ball(px, py, game),prog(nombreProg){
 
+}
 
 ProgrammableBouncingBall::~ProgrammableBouncingBall()
 {
 }
 
 bool ProgrammableBouncingBall::onClick(){
-	clicks++;
+	bool clicked = Bouncing_Ball::onClick();
+	if (clicked){
+		clicks++;
+		VM.run(prog, *this);
+	}
+	return clicked;
+	
 	/*llamar a la máquina virtual (que explicamos abajo) para ejecutar
-	una funcionalidad programada desde fuera.*/	return true;
+	una funcionalidad programada desde fuera.*/
 }
 
 void ProgrammableBouncingBall::addPoints(int point){ 

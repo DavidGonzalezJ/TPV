@@ -126,6 +126,9 @@
     <ClInclude Include="Vago.h">
       <Filter>Archivos de encabezado\Objetos</Filter>
     </ClInclude>
+    <ClInclude Include="PBBFactory.h">
+      <Filter>Archivos de encabezado\PBB</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Fuente.cpp">
@@ -203,8 +206,13 @@
     <ClCompile Include="Vago.cpp">
       <Filter>Archivos de código fuente\Objetos</Filter>
     </ClCompile>
+    <ClCompile Include="PBBFactory.cpp">
+      <Filter>Archivos de código fuente\PBB</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram.cd" />
+    <None Include="prog1.vm" />
+    <None Include="prog2.vm" />
   </ItemGroup>
 </Project>

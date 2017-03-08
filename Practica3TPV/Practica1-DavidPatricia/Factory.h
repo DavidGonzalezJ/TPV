@@ -15,6 +15,7 @@ public:
 
 	virtual ObjetoJuego* createNormalElement(int px, int py, JuegoPG* game) = 0;
 	virtual ObjetoJuego* createSpecialElement(int px, int py, JuegoPG* game) = 0;
-	virtual ObjetoJuego* createPrizeElement(int px, int py, JuegoPG* game) = 0;
+	virtual ObjetoJuego* createPrizeElement(int px, int py, JuegoPG* game) = 0;
+
 };
 

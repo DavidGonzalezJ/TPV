@@ -10,8 +10,9 @@ public:
 	confPG(JuegoPG* Juego);
 	~confPG();
 private:
-	Boton* oldFact; Boton* newFact;
+	Boton* oldFact; Boton* newFact; Boton* PBBFact;
 	static void oldFactC(JuegoPG* juego);
 	static void newFactC(JuegoPG* juego);
+	static void PBBFactC(JuegoPG* juego);
 };
 
