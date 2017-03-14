@@ -15,7 +15,7 @@ PlayPG::PlayPG(JuegoPG* juego) :EstadoPG(juego)
 	pRender = juego->getRender();
 	if (juego->getFactory() == 1) {
 		factory = new OldFactory();
-	}else if(juego->getFactory()==0) 
+	}else if(juego->getFactory() == 0) 
 		factory = new NewFactory();
 	else factory = new PBBFactory();
 

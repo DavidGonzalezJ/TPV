@@ -1,10 +1,9 @@
 ﻿#pragma once
 #include "Bouncing_Ball.h"
-#include "PBBExternAccess.h"
-#include "PBBVMprog.h"
 #include "PBBVM.h"
 
-class ProgrammableBouncingBall :virtual public Bouncing_Ball, virtual public PBBExternAccess
+class ProgrammableBouncingBall :
+	public Bouncing_Ball,  public PBBExternAccess
 {
 public:
 	ProgrammableBouncingBall(int px, int py, JuegoPG* game, std::string nombreProg);
@@ -25,7 +24,7 @@ public:
 	virtual void setPuntos(int punt){ puntos = punt; };
 
 // Añadir puntos al contador global de puntos.
-	virtual void addPoints(int point);
+	virtual void addPoints();
 
 // Desactivar el objeto
 	virtual void disable(){ expl = true; };

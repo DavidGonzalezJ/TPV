@@ -1,7 +1,7 @@
 #include "ProgrammableBouncingBall.h"
 #include "PlayPG.h"
 
-ProgrammableBouncingBall:: ProgrammableBouncingBall(int px, int py, JuegoPG* game, std::string nombreProg) : Bouncing_Ball(px, py, game),prog(nombreProg){
+ProgrammableBouncingBall::ProgrammableBouncingBall(int px, int py, JuegoPG* game, std::string nombreProg) : Bouncing_Ball(px, py, game), prog(nombreProg){
 
 }
 
@@ -21,6 +21,6 @@ bool ProgrammableBouncingBall::onClick(){
 	una funcionalidad programada desde fuera.*/
 }
 
-void ProgrammableBouncingBall::addPoints(int point){ 
+void ProgrammableBouncingBall::addPoints(){ 
 	static_cast<PlayPG*>(juego->getState())->newPuntos(this); 
 }

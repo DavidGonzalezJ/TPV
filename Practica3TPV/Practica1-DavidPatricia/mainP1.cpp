@@ -13,6 +13,7 @@
 #include "SDL.h"
 #include "JuegoPG.h"
 #include "Error.h"
+#include "PBBVMprog.h"
 #include <iostream>
 
 
@@ -22,6 +23,7 @@ int main(int argc, char* args[]) {  // SDL require esta cabecera
 	JuegoPG* partida = new JuegoPG();
 	//Valora si hay errores dentro del run
 	try{
+		PBBVMprog::compile("prog1.vm", "binProg.vm");
 		partida->run();
 	}
 	catch (ErrorFuente &e){

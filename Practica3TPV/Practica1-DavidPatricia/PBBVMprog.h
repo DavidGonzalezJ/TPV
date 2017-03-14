@@ -27,7 +27,9 @@ public:
 
 		in.close();
 	}
-	~PBBVMprog();
+	~PBBVMprog(){
+
+	}
 
 	const char* getInstr() {
 		return instr;
@@ -36,6 +38,14 @@ public:
 	int getInstrSize() {
 		return size;
 	}
+	/*
+	for (int i = 0; i < bytecode; i++){
+		if (pending[i]){
+			int n = *((int*)(bytecode + addr[i] + 1));
+		}
+	
+	}
+	*/
 
 	static void compile(string infile, string outfile) {
 		ifstream in;
@@ -43,7 +53,7 @@ public:
 
 		in.open(infile);
 		out.open(outfile, ios::binary);
-
+ 
 		char bytecode[MAX_SIZE];
 		int addr[MAX_SIZE];
 		bool pending[MAX_SIZE];
@@ -73,18 +83,14 @@ public:
 				else if (keyword == "GET_CLICKS") { ////ESPECIAL
 					bytecode[pc++] = GET_CLICKS;
 				}
-				else if (keyword == "PUSH") { ////ESPECIAL
-					int n;
-					in >> n;
-					bytecode[pc++] = PUSH;
-					*((int *)(bytecode + pc)) = n;
-					pc = pc + sizeof(int);
-				}
 				else if (keyword == "DEACTIVATE") { ////ESPECIAL
 					bytecode[pc++] = DEACTIVATE;
 				}
 				else if (keyword == "GET_POINTS") { ////ESPECIAL
 					bytecode[pc++] = GET_POINTS;
+				}
+				else if (keyword == "SET_POINTS") { ////ESPECIAL
+					bytecode[pc++] = SET_POINTS;
 				}
 				else if (keyword == "GAIN_POINTS") { ////ESPECIAL
 					bytecode[pc++] = GAIN_POINTS;
@@ -97,6 +103,13 @@ public:
 				}
 				else if (keyword == "SUB") { ////ESPECIAL
 					bytecode[pc++] = SUB;
+				}
+				else if (keyword == "PUSH") { ////ESPECIAL
+					int n;
+					in >> n;
+					bytecode[pc++] = PUSH;
+					*((int *)(bytecode + pc)) = n;
+					pc = pc + sizeof(int);
 				}
 				else if (keyword == "GOTO") { ////ESPECIAL
 					int n;

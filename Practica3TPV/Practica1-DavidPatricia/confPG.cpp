@@ -6,7 +6,7 @@ confPG::confPG(JuegoPG* juego) : EstadoPG(juego)
 {
 	oldFact = new Boton(juego, oldFactC, 120, TGlobosBoton);
 	newFact = new Boton(juego, newFactC, 220, TBolaBoton);
-	PBBFact = new Boton(juego, oldFactC, 320, TGlobosBoton);
+	PBBFact = new Boton(juego, PBBFactC, 320, TGlobosBoton);
 
 	pObjetos.emplace_back(oldFact);
 	pObjetos.emplace_back(newFact);
