@@ -37,7 +37,6 @@ public:
 	void factoria(int fac) { factory = fac; };////Si recibe 1 es oldFactory si recibe 0 es newFactory
 	int getFactory() {return factory;};
 
-
 private:
 
 	int factory=1;//POR DEFECTO ESTA LA ANTIGUA FACTORIA

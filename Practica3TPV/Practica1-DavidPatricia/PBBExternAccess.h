@@ -25,7 +25,7 @@ public:
 	virtual void setPuntos(int punt) = 0;
 
 	// Añadir puntos al contador global de puntos.
-	virtual void addPoints() = 0;
+	virtual void addPoints(int n) = 0;
 
 	// Desactivar el objeto
 	virtual void disable() = 0;

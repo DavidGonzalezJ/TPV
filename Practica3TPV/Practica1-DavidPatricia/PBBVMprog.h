@@ -63,7 +63,7 @@ public:
 
 		while (!in.eof()) {
 			in >> keyword;
-			if (in.good()) {
+			if (/*in.good()*/!in.bad()) {
 				bytecodeNum++;
 				addr[bytecodeNum] = pc;
 				pending[bytecodeNum] = false;

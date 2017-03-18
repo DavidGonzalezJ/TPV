@@ -13,6 +13,7 @@ public:
 	void newPremio(ObjetoJuego* po);
 	virtual void draw() const;
 	virtual void update();
+	void addPuntos(int n) { puntos += n; }; //Necesario para la PBB
 
 private:
 	int puntos = 0;

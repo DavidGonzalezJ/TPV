@@ -6,7 +6,7 @@
 #include "OldFactory.h"
 #include "NewFactory.h"
 #include "PBBFactory.h"
-#include "Bouncing_Ball.h"
+#include "ProgrammableBouncingBall.h"
 
 PlayPG::PlayPG(JuegoPG* juego) :EstadoPG(juego)
 {
@@ -29,7 +29,7 @@ PlayPG::~PlayPG()
 }
 
 void PlayPG::newBaja(ObjetoJuego* po) {
-	if (typeid(*po) == typeid(GlobosPG) || typeid(*po) == typeid(Bouncing_Ball)) {
+	if (typeid(*po) == typeid(GlobosPG) || typeid(*po) == typeid(Bouncing_Ball) || typeid(*po) == typeid(ProgrammableBouncingBall)) {
 		--numGlobos;
 	}
 	else if (typeid(*po) == typeid(Premio)) {

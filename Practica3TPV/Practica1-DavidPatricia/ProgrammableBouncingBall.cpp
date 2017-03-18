@@ -10,7 +10,10 @@ ProgrammableBouncingBall::~ProgrammableBouncingBall()
 }
 
 bool ProgrammableBouncingBall::onClick(){
-	bool clicked = Bouncing_Ball::onClick();
+	//bool clicked = Bouncing_Ball::onClick();
+	int x, y;
+	juego->getMousePos(x, y);
+	bool clicked = !expl && dentro(x, y);
 	if (clicked){
 		clicks++;
 		VM.run(prog, *this);
@@ -21,6 +24,6 @@ bool ProgrammableBouncingBall::onClick(){
 	una funcionalidad programada desde fuera.*/
 }
 
-void ProgrammableBouncingBall::addPoints(){ 
-	static_cast<PlayPG*>(juego->getState())->newPuntos(this); 
+void ProgrammableBouncingBall::addPoints(int puntos){ 
+	static_cast<PlayPG*>(juego->getState())->addPuntos(puntos);
 }

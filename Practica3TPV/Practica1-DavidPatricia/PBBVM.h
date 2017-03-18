@@ -50,7 +50,7 @@ public:
 					bball.setPuntos(pop());
 					break;
 				case PBBVMprog::GAIN_POINTS:
-					bball.addPoints();
+					bball.addPoints(pop());
 					break;
 				case PBBVMprog::ADD:
 					push(pop() + pop());

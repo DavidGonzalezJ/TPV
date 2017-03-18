@@ -212,7 +212,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram.cd" />
-    <None Include="prog1.vm" />
-    <None Include="prog2.vm" />
+    <None Include="prog1.vm">
+      <Filter>Archivos de recursos</Filter>
+    </None>
+    <None Include="prog2.vm">
+      <Filter>Archivos de recursos</Filter>
+    </None>
   </ItemGroup>
 </Project>

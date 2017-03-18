@@ -1,7 +1,7 @@
 ﻿#pragma once
 #include "Bouncing_Ball.h"
 #include "PBBVM.h"
-
+#include "PlayPG.h"
 class ProgrammableBouncingBall :
 	public Bouncing_Ball,  public PBBExternAccess
 {
@@ -24,10 +24,10 @@ public:
 	virtual void setPuntos(int punt){ puntos = punt; };
 
 // Añadir puntos al contador global de puntos.
-	virtual void addPoints();
+	virtual void addPoints(int puntos);
 
 // Desactivar el objeto
-	virtual void disable(){ expl = true; };
+	virtual void disable() { expl = true; static_cast<PlayPG*>(juego->getState())->newBaja(this); };
 
 private:
 	int clicks;
