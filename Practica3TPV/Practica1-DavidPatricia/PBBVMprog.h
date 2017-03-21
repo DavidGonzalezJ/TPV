@@ -135,7 +135,7 @@ public:
 		if (pending[i]){
 			int n = *((int*)(bytecode + addr[i] + 1));
 			if (n < bytecodeNum){
-				*((int*)(bytecode + i+1)) = addr[n];
+				*((int*)(bytecode + addr[i]+1)) = addr[n];
 			}
 			else
 			{

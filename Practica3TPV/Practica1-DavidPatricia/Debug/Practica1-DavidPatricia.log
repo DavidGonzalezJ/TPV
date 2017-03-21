@@ -1,5 +1,74 @@
-﻿Build started 21/03/2017 20:22:07.
+﻿Build started 21/03/2017 20:23:49.
+     1>Project "C:\hlocal\TPV\Practica3TPV\Practica1-DavidPatricia\Practica1-DavidPatricia.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\software\programacion\MSVStudio2013\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Boton.cpp Bouncing_Ball.cpp confPG.cpp Error.cpp EstadoPG.cpp Fuente.cpp GameOver.cpp GloboA.cpp GlobosPG.cpp JuegoPG.cpp mainP1.cpp Mariposa.cpp MenuPG.cpp NewFactory.cpp ObjetoPG.cpp OldFactory.cpp Pausa.cpp PBBFactory.cpp PBBVM.cpp PBBVMprog.cpp PlayPG.cpp Premio.cpp ProgrammableBouncingBall.cpp Sound_SDL.cpp TexturasSDL.cpp Vago.cpp
+         Vago.cpp
+         TexturasSDL.cpp
+     1>c:\software\programacion\msvstudio2013\vc\include\crtdbg.h(586): warning C4005: '_malloca' : macro redefinition
+                 c:\software\programacion\msvstudio2013\vc\include\malloc.h(224) : see previous definition of '_malloca'
+         Sound_SDL.cpp
+         ProgrammableBouncingBall.cpp
+         Premio.cpp
+         PlayPG.cpp
+         PBBVMprog.cpp
+         PBBVM.cpp
+         PBBFactory.cpp
+         Pausa.cpp
+         OldFactory.cpp
+         ObjetoPG.cpp
+         NewFactory.cpp
+         MenuPG.cpp
+         Mariposa.cpp
+         mainP1.cpp
+         JuegoPG.cpp
+     1>c:\hlocal\tpv\practica3tpv\practica1-davidpatricia\juegopg.cpp(68): warning C4018: '<' : signed/unsigned mismatch
+         GlobosPG.cpp
+     1>c:\software\programacion\msvstudio2013\vc\include\crtdbg.h(586): warning C4005: '_malloca' : macro redefinition
+                 c:\software\programacion\msvstudio2013\vc\include\malloc.h(224) : see previous definition of '_malloca'
+         GloboA.cpp
+     1>c:\software\programacion\msvstudio2013\vc\include\crtdbg.h(586): warning C4005: '_malloca' : macro redefinition
+                 c:\software\programacion\msvstudio2013\vc\include\malloc.h(224) : see previous definition of '_malloca'
+         GameOver.cpp
+         Generating Code...
+         Compiling...
+         Fuente.cpp
+         EstadoPG.cpp
+     1>c:\hlocal\tpv\practica3tpv\practica1-davidpatricia\estadopg.cpp(29): warning C4018: '<' : signed/unsigned mismatch
+         Error.cpp
+         confPG.cpp
+         Bouncing_Ball.cpp
+         Boton.cpp
+         Generating Code...
+       Link:
+         C:\software\programacion\MSVStudio2013\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\hlocal\TPV\Practica3TPV\bin\Practica1-DavidPatriciaDebug.exe" /INCREMENTAL /NOLOGO SDL2.lib SDL2main.lib SDL2_image.lib SDL2_ttf.lib SDL2_mixer.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\hlocal\TPV\Practica3TPV\bin\Practica1-DavidPatriciaDebug.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\hlocal\TPV\Practica3TPV\bin\Practica1-DavidPatriciaDebug.lib" /MACHINE:X86 Debug\Boton.obj
+         Debug\Bouncing_Ball.obj
+         Debug\confPG.obj
+         Debug\Error.obj
+         Debug\EstadoPG.obj
+         Debug\Fuente.obj
+         Debug\GameOver.obj
+         Debug\GloboA.obj
+         Debug\GlobosPG.obj
+         Debug\JuegoPG.obj
+         Debug\mainP1.obj
+         Debug\Mariposa.obj
+         Debug\MenuPG.obj
+         Debug\NewFactory.obj
+         Debug\ObjetoPG.obj
+         Debug\OldFactory.obj
+         Debug\Pausa.obj
+         Debug\PBBFactory.obj
+         Debug\PBBVM.obj
+         Debug\PBBVMprog.obj
+         Debug\PlayPG.obj
+         Debug\Premio.obj
+         Debug\ProgrammableBouncingBall.obj
+         Debug\Sound_SDL.obj
+         Debug\TexturasSDL.obj
+         Debug\Vago.obj
+         Practica1-DavidPatricia.vcxproj -> C:\hlocal\TPV\Practica3TPV\bin\Practica1-DavidPatriciaDebug.exe
+     1>Done Building Project "C:\hlocal\TPV\Practica3TPV\Practica1-DavidPatricia\Practica1-DavidPatricia.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:00.01
+Time Elapsed 00:00:07.88
