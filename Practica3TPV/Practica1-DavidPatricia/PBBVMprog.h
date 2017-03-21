@@ -73,54 +73,56 @@ public:
 				else if (keyword == "SET_DY") {
 					bytecode[pc++] = SET_DY;
 				}
-				else if (keyword == "GET_CLICKS") { ////ESPECIAL
+				else if (keyword == "GET_CLICKS") {
 					bytecode[pc++] = GET_CLICKS;
 				}
-				else if (keyword == "DEACTIVATE") { ////ESPECIAL
+				else if (keyword == "DEACTIVATE") {
 					bytecode[pc++] = DEACTIVATE;
 				}
-				else if (keyword == "GET_POINTS") { ////ESPECIAL
+				else if (keyword == "GET_POINTS") {
 					bytecode[pc++] = GET_POINTS;
 				}
-				else if (keyword == "SET_POINTS") { ////ESPECIAL
+				else if (keyword == "SET_POINTS") {
 					bytecode[pc++] = SET_POINTS;
 				}
-				else if (keyword == "GAIN_POINTS") { ////ESPECIAL
+				else if (keyword == "GAIN_POINTS") {
 					bytecode[pc++] = GAIN_POINTS;
 				}
-				else if (keyword == "ADD") { ////ESPECIAL
+				else if (keyword == "ADD") {
 					bytecode[pc++] = ADD;
 				}
-				else if (keyword == "MUL") { ////ESPECIAL
+				else if (keyword == "MUL") {
 					bytecode[pc++] = MUL;
 				}
-				else if (keyword == "SUB") { ////ESPECIAL
+				else if (keyword == "SUB") {
 					bytecode[pc++] = SUB;
 				}
-				else if (keyword == "PUSH") { ////ESPECIAL
+				else if (keyword == "PUSH") {
 					int n;
 					in >> n;
 					bytecode[pc++] = PUSH;
 					*((int *)(bytecode + pc)) = n;
 					pc = pc + sizeof(int);
 				}
-				else if (keyword == "GOTO") { ////ESPECIAL
+				else if (keyword == "GOTO") {
 					int n;
 					in >> n;
 					bytecode[pc++] = GOTO;
 					if (n < bytecodeNum){
-						bytecode[pc++] = addr[n];///
+						*((int *)(bytecode + pc)) = addr[n];
 					}
 					else{
-
+						//pc--;
 						pending[pc] = true;
+						*((int *)(bytecode + pc)) = n; // Almacenamos la n
+						//bytecodeNum++;
 					}
 					pc = pc + sizeof(int);
 				}
-				else if (keyword == "JMPZ") { ////ESPECIAL
+				else if (keyword == "JMPZ") {
 					bytecode[pc++] = JMPZ;
 				}
-				else if (keyword == "JMPGT") { ////ESPECIAL
+				else if (keyword == "JMPGT") {
 					bytecode[pc++] = JMPGT;
 				}
 				else {
@@ -132,6 +134,13 @@ public:
 	for (int i = 0; i < bytecodeNum; i++){
 		if (pending[i]){
 			int n = *((int*)(bytecodeNum + addr[i] + 1));
+			if (n < bytecodeNum){
+				*((int *)(bytecode + pc)) = addr[n];
+			}
+			else
+			{
+				bytecode[pc++] = bytecode[bytecodeNum++];
+			}
 		}
 	
 	}

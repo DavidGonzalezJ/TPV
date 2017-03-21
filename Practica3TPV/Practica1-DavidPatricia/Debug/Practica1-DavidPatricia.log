@@ -1,39 +1,5 @@
-﻿  Vago.cpp
-  TexturasSDL.cpp
-c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\crtdbg.h(302): warning C4005: '_malloca': redefinición de macro
-  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\malloc.h(120): note: vea la definición anterior de '_malloca'
-  Sound_SDL.cpp
-  ProgrammableBouncingBall.cpp
-  Premio.cpp
-  PlayPG.cpp
-  PBBVMprog.cpp
-  PBBVM.cpp
-  PBBFactory.cpp
-  Pausa.cpp
-  OldFactory.cpp
-  ObjetoPG.cpp
-  NewFactory.cpp
-  MenuPG.cpp
-  Mariposa.cpp
-  mainP1.cpp
-  JuegoPG.cpp
-c:\users\patricia\documents\universidad\tpv\practica4\tpv\practica3tpv\practica1-davidpatricia\juegopg.cpp(68): warning C4018: '<': no coinciden signed/unsigned
-  GlobosPG.cpp
-c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\crtdbg.h(302): warning C4005: '_malloca': redefinición de macro
-  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\malloc.h(120): note: vea la definición anterior de '_malloca'
-  GloboA.cpp
-c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\crtdbg.h(302): warning C4005: '_malloca': redefinición de macro
-  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\malloc.h(120): note: vea la definición anterior de '_malloca'
-  GameOver.cpp
-  Generando código...
-  Compilando...
-  Fuente.cpp
-  EstadoPG.cpp
-c:\users\patricia\documents\universidad\tpv\practica4\tpv\practica3tpv\practica1-davidpatricia\estadopg.cpp(29): warning C4018: '<': no coinciden signed/unsigned
-  Error.cpp
-  confPG.cpp
-  Bouncing_Ball.cpp
-  Boton.cpp
-  Generando código...
-  Practica1-DavidPatricia.vcxproj -> C:\Users\Patricia\Documents\UNIVERSIDAD\TPV\Practica4\TPV\Practica3TPV\bin\Practica1-DavidPatriciaDebug.exe
-  Practica1-DavidPatricia.vcxproj -> C:\Users\Patricia\Documents\UNIVERSIDAD\TPV\Practica4\TPV\Practica3TPV\bin\Practica1-DavidPatriciaDebug.pdb (Full PDB)
+﻿Build started 21/03/2017 17:58:18.
+
+Build succeeded.
+
+Time Elapsed 00:00:00.01
