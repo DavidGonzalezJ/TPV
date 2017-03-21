@@ -85,18 +85,20 @@ public:
 				case PBBVMprog::JMPZ:				///FALTA
 					if (pop() == 0){
 						//SALTA
+						pc = *((int*)(instr + pc + 1));
 					}
-					push(*((int*)(instr + pc + 1)));
-					pc = pc + sizeof(int);
+					else
+					{
+						pc = pc + sizeof(int);
+					}
 					break;
 
 				case PBBVMprog::JMPGT:				///FALTA
 					if (pop() > pop()){
 						//SALTA
+						pc = *((int*)(instr + pc + 1));
 					}
-
-					push(*((int*)(instr + pc + 1)));
-					pc = pc + sizeof(int);
+					else pc = pc + sizeof(int);
 					break;
 
 				default:

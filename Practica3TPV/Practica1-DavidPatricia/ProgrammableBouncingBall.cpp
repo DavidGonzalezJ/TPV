@@ -1,7 +1,7 @@
 #include "ProgrammableBouncingBall.h"
 #include "PlayPG.h"
 
-ProgrammableBouncingBall::ProgrammableBouncingBall(int px, int py, JuegoPG* game, std::string nombreProg) : Bouncing_Ball(px, py, game), prog(nombreProg){
+ProgrammableBouncingBall::ProgrammableBouncingBall(int px, int py, JuegoPG* game, std::string nombreProg) : Bouncing_Ball(px, py, game), prog(nombreProg),clicks(0){
 
 }
 

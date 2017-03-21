@@ -112,18 +112,40 @@ public:
 						*((int *)(bytecode + pc)) = addr[n];
 					}
 					else{
-						//pc--;
 						pending[bytecodeNum] = true;
 						*((int *)(bytecode + pc)) = n; // Almacenamos la n
-						//bytecodeNum++;
 					}
 					pc = pc + sizeof(int);
 				}
 				else if (keyword == "JMPZ") {
+					//bytecode[pc++] = JMPZ;
+					int n;
+					in >> n;
 					bytecode[pc++] = JMPZ;
+					if (n < bytecodeNum) {
+						*((int *)(bytecode + pc)) = addr[n];
+					}
+					else {
+						pending[bytecodeNum] = true;
+						*((int *)(bytecode + pc)) = n; // Almacenamos la n
+					}
+					pc = pc + sizeof(int);
+					
 				}
-				else if (keyword == "JMPGT") {
+				else if (keyword == "IFGT") {
+
+					int n;
+					in >> n;
 					bytecode[pc++] = JMPGT;
+					if (n < bytecodeNum) {
+						*((int *)(bytecode + pc)) = addr[n];
+					}
+					else {
+						pending[bytecodeNum] = true;
+						*((int *)(bytecode + pc)) = n; // Almacenamos la n
+					}
+					pc = pc + sizeof(int);
+
 				}
 				else {
 					throw "Error!";
@@ -134,12 +156,12 @@ public:
 	for (int i = 0; i <= bytecodeNum; i++){
 		if (pending[i]){
 			int n = *((int*)(bytecode + addr[i] + 1));
-			if (n < bytecodeNum){
+			if (n <= bytecodeNum){
 				*((int*)(bytecode + addr[i]+1)) = addr[n];
 			}
 			else
 			{
-				bytecode[pc++] = bytecode[bytecodeNum++];
+				*((int*)(bytecode + addr[i] + 1)) = pc++;
 			}
 		}
 	
