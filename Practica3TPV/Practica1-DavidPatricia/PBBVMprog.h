@@ -113,7 +113,7 @@ public:
 					}
 					else{
 						//pc--;
-						pending[pc] = true;
+						pending[bytecodeNum] = true;
 						*((int *)(bytecode + pc)) = n; // Almacenamos la n
 						//bytecodeNum++;
 					}
@@ -131,11 +131,11 @@ public:
 				
 			} 	
 		}
-	for (int i = 0; i < bytecodeNum; i++){
+	for (int i = 0; i <= bytecodeNum; i++){
 		if (pending[i]){
-			int n = *((int*)(bytecodeNum + addr[i] + 1));
+			int n = *((int*)(bytecode + addr[i] + 1));
 			if (n < bytecodeNum){
-				*((int *)(bytecode + pc)) = addr[n];
+				*((int*)(bytecode + i+1)) = addr[n];
 			}
 			else
 			{

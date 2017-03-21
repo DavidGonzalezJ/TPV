@@ -80,7 +80,6 @@ public:
 
 				case PBBVMprog::GOTO:
 					pc = *((int*)(instr + pc+1));
-					pc--;
 					break;
 
 				case PBBVMprog::JMPZ:				///FALTA
