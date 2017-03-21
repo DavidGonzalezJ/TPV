@@ -38,14 +38,7 @@ public:
 	int getInstrSize() {
 		return size;
 	}
-	/*
-	for (int i = 0; i < bytecode; i++){
-		if (pending[i]){
-			int n = *((int*)(bytecode + addr[i] + 1));
-		}
-	
-	}
-	*/
+
 
 	static void compile(string infile, string outfile) {
 		ifstream in;
@@ -134,8 +127,14 @@ public:
 					throw "Error!";
 				}
 				
-			} 
+			} 	
 		}
+	for (int i = 0; i < bytecodeNum; i++){
+		if (pending[i]){
+			int n = *((int*)(bytecodeNum + addr[i] + 1));
+		}
+	
+	}
 		out.write(bytecode, pc);
 
 		in.close();

@@ -36,9 +36,8 @@ public:
 				case PBBVMprog::SET_DY:
 					bball.setY(pop());
 					break;
-				case PBBVMprog::PUSH:
-					push(*((int*)(instr + pc + 1)));
-					pc = pc + sizeof(int); // the for loop will add 1 break;
+				case PBBVMprog::GET_CLICKS:
+					push(bball.getClicks());
 					break;
 				case PBBVMprog::DEACTIVATE:
 					bball.disable();
@@ -61,14 +60,21 @@ public:
 				case PBBVMprog::SUB:
 					push(pop() - pop());
 					break;
+				case PBBVMprog::PUSH:
+					push(*((int*)(instr + pc + 1)));
+					pc = pc + sizeof(int); // the for loop will add 1 break;
+					break;
 				case PBBVMprog::GOTO:
-					push(pop() * pop());			///FALTA
+					push(*((int*)(instr + pc + 1)));
+					pc = pc + sizeof(int);
 					break;
 				case PBBVMprog::JMPZ:				///FALTA
-					push(pop() * pop());
+					push(*((int*)(instr + pc + 1)));
+					pc = pc + sizeof(int);
 					break;
 				case PBBVMprog::JMPGT:				///FALTA
-					push(pop() * pop());
+					push(*((int*)(instr + pc + 1)));
+					pc = pc + sizeof(int);
 					break;
 				default:
 					break;
