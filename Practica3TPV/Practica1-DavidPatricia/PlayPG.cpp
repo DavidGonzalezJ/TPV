@@ -17,7 +17,10 @@ PlayPG::PlayPG(JuegoPG* juego) :EstadoPG(juego)
 		factory = new OldFactory();
 	}else if(juego->getFactory() == 0) 
 		factory = new NewFactory();
-	else factory = new PBBFactory();
+	else { 
+		PBBVMprog::compile(rand() % 10 > 4 ? "prog1.vm" : "prog2.vm", "binProg.vm");
+		factory = new PBBFactory();
+	};
 
 	initGlobos();
 }

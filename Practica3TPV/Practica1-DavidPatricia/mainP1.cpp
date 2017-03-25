@@ -1,5 +1,5 @@
-//Práctica 4
-//Autores: Patricia Cabrero y David González
+ï»¿//PrÃ¡ctica 4
+//Autores: Patricia Cabrero y David GonzÃ¡lez
 
 #ifdef _DEBUG
 #define _CRTDBG_MAP_ALLOC
@@ -23,7 +23,6 @@ int main(int argc, char* args[]) {  // SDL require esta cabecera
 	JuegoPG* partida = new JuegoPG();
 	//Valora si hay errores dentro del run
 	try{
-		PBBVMprog::compile("prog2.vm", "binProg.vm");
 		partida->run();
 	}
 	catch (ErrorFuente &e){
